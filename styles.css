@@ -314,53 +314,6 @@ a { color: inherit; }
   color: var(--ink-soft);
 }
 
-/* ============ SCHEDULE ============ */
-.schedule-section {
-  background: var(--cream);
-  padding-block: clamp(2.5rem, 6vw, 4.5rem);
-}
-.schedule-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2rem, 5vw, 3rem);
-  align-items: center;
-}
-.schedule-copy h2 {
-  font-size: clamp(2rem, 5vw, 3.1rem);
-  margin-bottom: 1em;
-  text-align: center;
-}
-.schedule-cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.9rem;
-}
-.schedule-card {
-  background: var(--card);
-  border-radius: var(--radius-sm);
-  padding: 1rem 0.75rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  box-shadow: 0 6px 16px rgba(60, 35, 27, 0.08);
-}
-.schedule-card .day { font-weight: 700; }
-.schedule-card .time { font-weight: 700; font-size: 1.1rem; }
-.schedule-card .class-name { color: var(--ink-soft); font-size: 0.9rem; }
-.schedule-note {
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--ink-soft);
-  margin-top: 1rem;
-}
-.schedule-media img {
-  width: 100%;
-  height: clamp(280px, 45vw, 480px);
-  object-fit: cover;
-  border-radius: 0 45% 45% 0 / 0 60% 60% 0;
-}
-
 /* ============ TESTIMONIALS ============ */
 .testimonials-section {
   background: var(--sage);
@@ -495,7 +448,6 @@ a { color: inherit; }
    ========================================================= */
 
 @media (min-width: 640px) {
-  .schedule-cards { grid-template-columns: repeat(3, 1fr); }
   .classes-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -510,20 +462,12 @@ a { color: inherit; }
   .hero-text { margin-inline: 0; }
   .hero-photo { margin-inline: 0; width: min(400px, 85%); }
 
-  .schedule-grid { grid-template-columns: 1fr 1fr; }
-  .schedule-copy h2 { text-align: right; }
-  .schedule-cards { grid-template-columns: repeat(2, 1fr); }
-
-  .footer-grid { grid-template-columns: 1.4fr 0.8fr 0.8fr 0.9fr; text-align: right; }
+  .footer-grid { grid-template-columns: 1.4fr 0.9fr 0.9fr; text-align: right; }
   .footer-brand { flex-direction: row; text-align: right; }
   .footer-col { text-align: right; }
   .social-links { justify-content: flex-start; }
 
   .classes-grid { grid-template-columns: repeat(3, 1fr); }
-}
-
-@media (min-width: 1000px) {
-  .schedule-cards { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (prefers-reduced-motion: reduce) {
